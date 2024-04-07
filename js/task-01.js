@@ -1,56 +1,45 @@
-// Напиши скрипт который:
+const inputEl = document.querySelector(".input");
+const outputEl = document.querySelector(".output");
+const buttonEl = document.querySelector(".button");
 
-// Посчитает и выведет в консоль количество категорий в 
-// ul#categories, то есть элементов li.item.
-// Для каждого элемента li.item в списке ul#categories, 
-// найдет и выведет в консоль текст заголовка элемента (тега <h2>) 
-// и количество элементов в категории (всех вложенных в него <li>).
-// В результате, в консоли будут выведены такие сообщения.
+buttonEl.addEventListener("click", onClick);
+outputEl.addEventListener("mousedown", onMouseDown);
 
-// Number of categories: 3
+function onClick() {
+  outputEl.textContent = inputEl.value;
+}
 
-// Category: Animals
-// Elements: 4
+// function onMouseDown(e) {
+//   console.log("event mousedown", e);
+//   const drag = e.target;
 
-// Category: Products
-// Elements: 3
+//   drag.style.position = "absolute";
+//   drag.style.zIndex = 1000;
 
-// Category: Technologies
-// Elements: 5
+//   document.body.append(drag);
 
-// ----------------------I----------------------
-const categories = document.querySelector('ul#categories');
-// console.log(categories);
-// console.log(categories.children.length);
-const stroka = 'Number of categories:'
-const getManyCategories = categories.children.length;
-// console.log('Number of categories:', getManyCategories);
-console.log(stroka, getManyCategories);
+//   function moveDrag(pageX, pageY) {
+//     drag.style.left = pageX - drag.offsetWidth / 2 + "px";
+//     drag.style.top = pageY - drag.offsetHeight / 2 + "px";
+//   }
 
-// ----------------------II----------------------
-const allItems = document.querySelectorAll('.item');
-// console.log(allItems);
-allItems.forEach((element) => {
+//   moveDrag(e.pageX, e.pageY);
 
-        // let elementTitle = element.querySelector('h2').textContent;
-        let elementTitle = element.firstElementChild.textContent;
-        
-        // let oneTitleElements = element.querySelectorAll('li');
-        let oneTitleElements = element.lastElementChild.children;
-        let oneTitleElemntsQty = oneTitleElements.length;
-        
-            console.log('Category:', elementTitle);
-            console.log('Elements:', oneTitleElemntsQty);
-          
-        
-        });
+//   function onMouseMove(e) {
+//     moveDrag(e.pageX, e.pageY);
+//   }
 
+//   document.addEventListener("mousemove", onMouseMove);
 
-    
-        
-        
-        
+//   // Обробник події 'mouseup' видаляє обробник 'mousemove' після відпускання миші
+//   drag.onmouseup = function () {
+//     document.removeEventListener("mousemove", onMouseMove);
+//     drag.onmouseup = null;
+//   };
+// }
 
+// // Забороняємо стандартну поведінку перетягування
 
-
-
+// drag.ondragstart = function () {
+//   return false;
+// };

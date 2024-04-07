@@ -17,13 +17,17 @@
           name="text"
           placeholder="What are you thinking?"
         />
-        <button type="submit" class="button">
+        <button type="submit" class="button" onClick="onButtonClick">
           CLICK ME
           <svg class="icon" width="24" height="24">
             <use href="./images/icons.svg#icon-submit"></use>
           </svg>
         </button>
       </div>
+      <p class="text">
+        YOU'RE THINKING ABOUT:
+        <span id="drag" class="output" draggable="true"></span>
+      </p>
     </div>
     <script src="js/task-01.js" type="module"></script>
   </body>

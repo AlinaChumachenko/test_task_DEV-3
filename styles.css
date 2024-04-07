@@ -7,18 +7,11 @@ body {
   background-color: #ad8582;
 }
 
-/* .color1 {color: #403640;}
-.color2 {color: #59434b;}
-.color3 {color: #7c5e66;}
-.color4 {color: #ad8582;}
-.color5 {color: #e3b7a5;} */
 .container {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 30px auto;
-
-  /* text-align: center; */
 }
 
 .box {
@@ -30,7 +23,6 @@ body {
 }
 
 .title {
-  /* color: #403640; */
   color: #ffffff;
   text-shadow: 5px 5px #403640;
   font-size: 50px;
@@ -59,7 +51,6 @@ body {
 .input {
   box-sizing: border-box;
   width: 300px;
-
   outline: none;
   border-radius: 5px;
   padding: 10px;
@@ -79,7 +70,6 @@ body {
 .button {
   display: flex;
   align-items: center;
-
   border-radius: 5px;
   padding: 10px 32px;
   cursor: pointer;
@@ -95,4 +85,14 @@ body {
 .icon {
   align-items: center;
   margin-left: 10px;
+}
+
+.text {
+  color: #ffffff;
+  text-align: center;
+}
+.output {
+  color: #000000;
+  font-size: 50px;
+  font-weight: 300;
 }
